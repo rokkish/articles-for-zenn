@@ -1,0 +1,23 @@
+{
+  "name": "articles-for-zenn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rokkish/articles-for-zenn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rokkish/articles-for-zenn/issues"
+  },
+  "homepage": "https://github.com/rokkish/articles-for-zenn#readme",
+  "dependencies": {
+    "zenn-cli": "^0.1.134"
+  },
+  "description": ""
+}
