@@ -59,9 +59,9 @@ sequenceDiagram
 となります。
 
 # 結果
-作成したサンプルの PR status check は以下です。
+作成したサンプルの PR status checks は以下です。
 
-![作成したサンプルの PR status check](/images/pr_status_checks.png)
+![作成したサンプルの PR status checks](/images/pr_status_checks.png)
 `sub workflow -- called by main` とあるのが、今回作成した commit status になります。
   - 比較のため workflow_call を使ったジョブ `main workflow / call_sub_by_call_workflow` も載せています。 やはり workflow_call では、job 名、トリガーイベント、処理時間まで自動で追加されるし、summary にはジョブの結果まであるので、とても見やすいですね 🫠
 
