@@ -113,7 +113,7 @@ https://docs.github.com/en/rest/authentication/permissions-required-for-github-a
 :::message
 main ブランチへ feat ブランチをマージするためのPRを作成したという状況を想定しています
 :::
-Pull Request イベントでトリガーされたワークフローにおいて、actions/checkout で checkout されるデフォルトの状態は、`refs/pull/x/merge` となっています。つまりマージコミット上にいます。
+Pull Request イベントでトリガーされたワークフローにおいて、actions/checkout で checkout されるデフォルトの状態（HEAD）は、`refs/pull/x/merge` となっています。つまりマージコミット上にいます。
 
 ```sh:output of git log
 # actions/checkout した後で以下を実行する 
@@ -127,12 +127,12 @@ $ git log --oneline --graph --decorate --all
 
 一方で、今回 commit status を付与したい commit はマージコミット(`0a1c82e`)ではなく、 push された feat ブランチの最新コミット[^is_latest] (`2880644`)です。
 
-actions/checkout にて ref を feat ブランチに指定することで解決できます。
+actions/checkout にて ref を feat ブランチに指定することで、 commi status を付与したいコミットハッシュを取得できるはずです。
 
 #### actions/checkout にて ref を指定しないで解決する方法
 ちなみに、 ref を変えずに欲しいコミットハッシュを得る方法もあります。
 
-マージコミット上で、`git rev-parse HEAD^2` として、二番目の親ブランチのコミットハッシュを取得することで可能です。
+マージコミット上で、`git rev-parse HEAD^2` として、二番目の親ブランチのコミットハッシュを取得することが可能です。
 ```sh:main.yaml
 # current ref is merge commit
 # HEAD^2 means the second parent of HEAD
