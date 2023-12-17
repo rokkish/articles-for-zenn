@@ -58,6 +58,13 @@ sequenceDiagram
 
 となります。
 
+# 結果
+作成したサンプルの PR status check は以下です。
+
+`sub workflow -- called by main` とあるのが、今回作成した commit status になります。
+  - 比較のため workflow_call を使ったジョブ `main workflow / call_sub_by_call_workflow` も載せています。 やはり workflow_call では、job 名、トリガーイベント、処理時間まで自動で追加されるし、summary にはジョブの結果まであるので、とても見やすいですね 🫠
+
+![作成したサンプルの PR status check](/images/pr_status_checks.png)
 # 躓いた点
 以下では、ソースコードを交えながら躓いた点を説明します。
 https://github.com/rokkish/sync_status_check/tree/main/.github/workflows
