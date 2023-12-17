@@ -4,7 +4,7 @@ emoji: "✅"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["githubactions"]
 published: true
-published_at: 2023-12-18 09:00
+published_at: 2023-12-18 07:00
 ---
 
 # 概要
