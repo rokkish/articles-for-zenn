@@ -118,7 +118,7 @@ $ git log --oneline --graph --decorate --all
 * 91cc053 (grafted) init
 ```
 
-一方で、今回 commit status を付与したい commit はマージコミット(`0a1c82e`)ではなく、 push された feat ブランチの最新コミット[^is_latest](`2880644`)です。
+一方で、今回 commit status を付与したい commit はマージコミット(`0a1c82e`)ではなく、 push された feat ブランチの最新コミット[^is_latest] (`2880644`)です。
 
 actions/checkout にて ref を feat ブランチに指定することで解決できます。
 
